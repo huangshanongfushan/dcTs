@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.zen .zen-inlineList>li {
+	padding-right: 0.5em;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.zen .zen-assistiveText {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.zen .zen-assistiveLink {
+	margin: 0px !important;
+	padding: 0px !important;
+	width: 1px !important;
+	height: 1px !important;
+	color: rgb(34, 34, 34);
+	line-height: 0 !important;
+	overflow: visible !important;
+	text-decoration: none;
+	background-color: transparent !important;
+}

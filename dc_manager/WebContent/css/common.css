@@ -1,0 +1,332 @@
+/*
+ * This code is for Internal Salesforce use only, and subject to change without notice.
+ * Customers shouldn't reference this file in any web pages.
+ */
+ *{margin:0;padding:0;}
+
+body, td {
+	margin: 0;
+	color: #333
+}
+body {
+	background-repeat: repeat-x;
+	background-position: left top;
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	background-color: #fff
+}
+a {
+	color: #333
+}
+a:hover {
+	text-decoration: underline
+}
+th {
+	text-align: left;
+	font-weight: bold;
+	white-space: nowrap
+}
+form {
+	margin: 0;
+	padding: 0
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Verdana', 'Geneva', sans-serif;
+	margin: 0;
+	display: inline
+}
+textarea {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+}
+select {
+	color: #000
+}
+select:disabled {
+	color: #aaa
+}
+
+img {
+	border: 0
+}
+dl {
+	margin-left: 1em
+}
+dt {
+	font-weight: bold
+}
+fieldset legend {
+	font-weight: bold;
+	color: black
+}
+fieldset ul {
+	padding: 0
+}
+ul li, ol li {
+	margin-left: 1.5em;
+	padding-left: 0
+}
+input {
+	padding-top: 0
+}
+
+.sortDesc {
+	background-image: url(/img/sort_desc_arrow.gif);
+	background-position: 0 0;
+	width: 21px;
+	height: 14px;
+	;
+	vertical-align: text-top
+}
+.sortAsc {
+	background-image: url(/img/sort_asc_arrow.gif);
+	background-position: 0 0;
+	width: 21px;
+	height: 14px;
+	vertical-align: text-top
+}
+
+.bPageHeader .phHeader, .tabsNewBar {
+	width: 1366px;
+	
+}
+table.tabsNewBar tr.newBar {
+	display: none
+}
+.tabNavigation {
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-bottom: 6px;
+	font-family: 'Verdana', 'Geneva', sans-serif
+}
+table.tab {
+	line-height: normal
+}
+.tab td {
+	text-align: center;
+	background-image: url(/img/sprites/motiftab3.gif);
+	background-position: left -156px;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0 0 0 6px;
+	border-bottom: 1px solid #a4a29e
+}
+.tab a {
+	text-decoration: none;
+	color: #444
+}
+.tab div {
+	background-image: url(/img/sprites/motiftab3.gif);
+	background-position: right -4776px;
+	background-repeat: no-repeat;
+	padding: 3px 9px 5px 3px
+}
+.tab a:hover {
+	text-decoration: underline
+}
+.tab td.currentTab {
+	font-weight: bold;
+	border: 0
+}
+.currentTab, .currentTab a {
+	color: #fff
+}
+.currentTab div {
+	padding: 4px 9px 5px 3px
+}
+
+.outer {
+	margin: 0;
+}
+.outer td.oRight {
+	padding-top: 0;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	background-color: #fff;
+}
+.bodyDiv {
+	position: relative;
+}
+.sidebarCell, #sidebarDiv {
+	height: 200px;
+}
+.sidebarCollapsible {
+	padding-right: 6px
+}
+#sidebarDiv {
+	z-index: 10
+}
+.sidebarCollapsed {
+	width: 0;
+	padding-right: 0
+}
+.sidebarCollapsed #sidebarDiv {
+	display: none
+}
+#handlebarContainer {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 200px;
+	height: 430px;
+	cursor: url(../images/col-collapse.cur), pointer;
+	overflow-y: hidden;
+	text-decoration: none
+}
+
+#handlebarContainer .indicator {
+	position: absolute;
+	z-index: 6;
+	right: 1px;
+	width: 6px;
+	height: 41px;
+	background: url(/img/sidebar/LNav_twisty_opened.gif) no-repeat top left;
+}
+.sidebarCollapsed #handlebarContainer .indicator {
+	background-image: url(/img/sidebar/LNav_twisty_closed.gif)
+}
+#pinIndicator {
+	top: 20px
+}
+#pinIndicator2 {
+	bottom: 20px
+}
+#pnetSurveySentStatus {
+	margin-bottom: 15px
+}
+.outer td {
+	vertical-align: top
+}
+
+.bPageTitle .ptBody .links {
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-left: 0;
+	float: right;
+	display:inline;
+	text-align: right;
+	vertical-align: middle;
+	font-size: 91%;
+	white-space: nowrap
+}
+
+.bSubBlock .lbBody UL {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.sidebarModuleHeader {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-bottom: -5px;
+	margin-left: -23px;
+	
+}
+.sidebarModuleBody, .sidebarModuleBodyNoHeader {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px
+}
+
+.mruItem {
+	position: relative;
+	background-color: rgb(68,73,83);
+	z-index: 7;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 3px;
+	padding-left: 1px
+}
+body {
+	font-size: 13px;
+}
+.paginator .selector tr.optUnselected td.rppOpt {
+	background-color: rgb(68,73,83); 
+	color: #fff;
+}
+
+.zen .zen-tabMenu {
+	background-color: rgb(35,111,189); 
+/* 	background-color:#1874CD; */
+	height:31px;
+	width: 1366px
+}
+
+.zen .zen-tabMenu>li {
+	height: 35px;
+	line-height: 31px;
+	padding: 0px 0px 0px 0px
+}
+
+.zen .zen-tabMenu .zen-active {
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	-moz-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	-webkit-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+}
+/* Home */
+.zen .zen-tabMenu .zen-active1 {
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	
+	-moz-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	-webkit-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	
+}
+/* System  */
+.zen .zen-tabMenu .zen-active3 {
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	
+	-moz-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	-webkit-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	
+}
+/* Report */
+.zen .zen-tabMenu .zen-active4 {
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	
+	-moz-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	-webkit-box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	box-shadow: 3px 0 5px -3px #999, -3px 0 5px -3px #999;
+	
+}
+
+.zen .zen-tabMenu a {
+	font-size: 1.083em;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none
+}
+.zen .zen-tabMenu a:hover {
+	color: #fff;
+}
+
+.zen .zen-tabMenu .zen-active>a {
+	color: #fff;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: transparent
+}
+.fusionli{
+	list-style:none;float: left;
+}
+.sys_div{
+	text-decoration: none;float: left;
+}

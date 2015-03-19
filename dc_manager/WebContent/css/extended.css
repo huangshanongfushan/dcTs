@@ -1,0 +1,636 @@
+*{margin:0;padding:0;}
+a {
+	color: rgb(51, 52, 53);
+}
+body .x-btn button {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body .btn {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body .btnImportant {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body .btnDisabled {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body .btnCancel {
+	font-family: Arial,Helvetica,sans-serif;
+}
+/*Search按钮字体格式*/
+body .menuButton .menuButtonButton {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body .menuButton .menuButtonMenu a {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body .menuButton .menuButtonMenu input.theOption {
+	font-family: Arial,Helvetica,sans-serif;
+}
+h1 {
+	font-family: Arial,Helvetica,sans-serif;
+}
+h2 {
+	font-family: Arial,Helvetica,sans-serif;
+}
+h3 {
+	font-family: Arial,Helvetica,sans-serif;
+}
+h4 {
+	font-family: Arial,Helvetica,sans-serif;
+}
+h5 {
+	font-family: Arial,Helvetica,sans-serif;
+}
+h6 {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body button {
+	background: url("../images/btn_sprite.png") repeat-x right top rgb(232, 232, 233); border-width: 1px; border-style: solid; border-color: rgb(181, 181, 181) rgb(181, 181, 181) rgb(127, 127, 127); margin: 1px; padding: 2px 3px; border-radius: 3px; color: rgb(51, 51, 51); font-size: 0.9em; font-weight: bold; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+body .x-btn {
+	background: url("../images/btn_sprite.png") repeat-x right top rgb(232, 232, 233); border-width: 1px; border-style: solid; border-color: rgb(181, 181, 181) rgb(181, 181, 181) rgb(127, 127, 127); margin: 1px; padding: 2px 3px; border-radius: 3px; color: rgb(51, 51, 51); font-size: 0.9em; font-weight: bold; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+body .btn {
+	background: url("../images/btn_sprite.png") repeat-x right top rgb(232, 232, 233); border-width: 1px; border-style: solid; border-color: rgb(181, 181, 181) rgb(181, 181, 181) rgb(127, 127, 127); margin: 1px; padding: 2px 3px; border-radius: 3px; color: rgb(51, 51, 51); font-size: 0.9em; font-weight: bold; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+body .btnDisabled {
+	background: url("../images/btn_sprite.png") repeat-x right top rgb(232, 232, 233); border-width: 1px; border-style: solid; border-color: rgb(181, 181, 181) rgb(181, 181, 181) rgb(127, 127, 127); margin: 1px; padding: 2px 3px; border-radius: 3px; color: rgb(51, 51, 51); font-size: 0.9em; font-weight: bold; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+body .btnCancel {
+	background: url("../images/btn_sprite.png") repeat-x right top rgb(232, 232, 233); border-width: 1px; border-style: solid; border-color: rgb(181, 181, 181) rgb(181, 181, 181) rgb(127, 127, 127); margin: 1px; padding: 2px 3px; border-radius: 3px; color: rgb(51, 51, 51); font-size: 0.9em; font-weight: bold; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+
+body .btnSharing {
+	background: url("../images/btn_important.png") repeat-x; padding: 0px 7px 3px; border-radius: 5px; border: 0px currentColor; height: 21px; color: rgb(255, 255, 255); font-size: 0.95em; box-shadow: 0px 2px 4px #aaa; -moz-border-radius: 5px; -moz-box-shadow: 0 2px 4px #aaa; -webkit-box-shadow: 0 2px 4px #aaa; -webkit-border-radius: 5px;
+}
+body .btnImportant {
+	background: url("../images/btn_important.png") repeat-x; padding: 0px 7px 3px; border-radius: 5px; border: 0px currentColor; height: 21px; color: rgb(255, 255, 255); font-size: 0.95em; box-shadow: 0px 2px 4px #aaa; -moz-border-radius: 5px; -moz-box-shadow: 0 2px 4px #aaa; -webkit-box-shadow: 0 2px 4px #aaa; -webkit-border-radius: 5px;
+}
+body .btnIcon {
+	padding-left: 18px;
+}
+body .btnDisabled {
+	background-position: 0px -90px; border-color: rgb(196, 196, 196); color: rgb(144, 144, 144);
+}
+body button.disabled {
+	background-position: 0px -90px; border-color: rgb(196, 196, 196); color: rgb(144, 144, 144);
+}
+body .btnDisabled {
+	background-position: 0px -90px; border-color: rgb(196, 196, 196); color: rgb(144, 144, 144);
+}
+body .menuButton {
+	margin: 0px; padding: 0px; display: inline-block;
+}
+body .menuButton .menuButtonButton {
+	margin: 0px; padding: 3px 2px 3px 5px; display: inline-block;
+}
+body .menuButton .hasDefault.menuButtonButton {
+	padding-right: 24px; background-image: url("../images/split_mutton_sprite.png");
+}
+.menuButton .menuButtonButton a {
+	color: rgb(51, 51, 51);
+}
+body .x-btn-pressed {
+	background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body .x-btn-click {
+	background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body .x-btn-menu-active {
+	background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body button:active {
+	background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body .btn:active {
+	background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body .btnPressed {
+	background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body .btnCancel:active {
+	background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body .menuButton .menuButtonButton:active {
+	 background-position: right -60px; border-color: rgb(88, 88, 88) rgb(88, 88, 88) rgb(147, 147, 147);
+}
+body .btnDisabled {
+	background-position: 0px -90px; border-color: rgb(196, 196, 196); color: rgb(144, 144, 144);
+}
+body .menuButton .menuButtonMenu {
+	padding: 0px; border: 0px solid rgb(125, 125, 125); box-shadow: 0px 1px 5px #727272; background-color: rgb(248, 248, 248); -moz-box-shadow: 0 1px 5px #727272; -webkit-box-shadow: 0 1px 5px #727272;
+}
+body .searchCustomization .menuButton .menuButtonMenu {
+	padding: 0px; border: 1px solid rgb(125, 125, 125); box-shadow: 0px 1px 5px #727272; background-color: rgb(248, 248, 248); -moz-box-shadow: 0 1px 5px #727272; -webkit-box-shadow: 0 1px 5px #727272;
+}
+body .googleDocMutton .menuButtonMenu a {
+	padding: 4px 10px; border: 0px currentColor; font-size: 1em; font-weight: normal; background-color: transparent;
+}
+body .searchCustomization .menuButton .menuButtonMenu a {
+	padding: 4px 10px; border: 0px currentColor; font-size: 1em; font-weight: normal; background-color: transparent;
+}
+#browseTags .menuButton .menuButtonMenu a {
+	padding: 4px 10px; border: 0px currentColor; font-size: 1em; font-weight: normal; background-color: transparent;
+}
+body .bMyTask .menuButton .menuButtonMenu input.theOption {
+	padding: 4px 10px; border: 0px currentColor; font-size: 1em; font-weight: normal; background-color: transparent;
+}
+body .menuButton .menuButtonMenu a {
+	padding: 4px 10px; border: 0px currentColor; font-size: 1em; font-weight: normal; background-color: transparent;
+}
+body .googleDocMutton .menuButtonMenu a:hover {
+	background: rgb(227, 243, 255); border: 0px currentColor; color: rgb(1, 91, 167); text-decoration: underline; cursor: pointer;
+}
+body .searchCustomization .menuButton .menuButtonMenu a:hover {
+	background: rgb(227, 243, 255); border: 0px currentColor; color: rgb(1, 91, 167); text-decoration: underline; cursor: pointer;
+}
+#browseTags .menuButton .menuButtonMenu a:hover {
+	background: rgb(227, 243, 255); border: 0px currentColor; color: rgb(1, 91, 167); text-decoration: underline; cursor: pointer;
+}
+body .menuButton .menuButtonMenu a:hover {
+	background: rgb(227, 243, 255); border: 0px currentColor; color: rgb(1, 91, 167); text-decoration: underline; cursor: pointer;
+}
+.bMyTask .menuButton .selectMenuDropdownDiv {
+	border: 0px currentColor;
+}
+body .googleDocMutton .menuButtonMenu a:hover {
+	text-decoration: none;
+}
+body .bRelatedList .bPageBlock .pbButton .btn {
+	margin: 1px; padding: 0px 3px;
+}
+body.homeTab .bMyCalendar .pbButton .btn {
+	margin: 1px; padding: 0px 3px;
+}
+body.homeTab .bMyDashboard .pbButton .btn {
+	margin: 1px; padding: 0px 3px;
+}
+.sidebarModuleBody .btn {
+	margin: 1px; padding: 0px 3px;
+}
+body .bRelatedList .menuButton .menuButtonButton {
+	background-position: right -120px; margin: 1px 0px; padding: 1px 22px 1px 5px;
+}
+body .bRelatedList .menuButton .menuButtonButton:active {
+	background-position: right -180px;
+}
+body .primaryBtn {
+	background-position: right -180px;
+}
+body .primaryBtn:active {
+	background-position: right -270px;
+}
+body .btnPrimary {
+	background-position: right -120px; padding: 2px 10px; border-radius: 5px; font-size: 1em; box-shadow: 0px 2px 4px #aaa; -moz-border-radius: 5px; -moz-box-shadow: 0 2px 4px #aaa; -webkit-box-shadow: 0 2px 4px #aaa; -webkit-border-radius: 5px;
+}
+body .btnPrimary {
+	border: 2px solid rgb(255, 255, 255); color: rgb(255, 255, 255);
+}
+body .btnDisabled.btnPrimary {
+	border: 2px solid rgb(255, 255, 255); color: rgb(255, 255, 255);
+}
+body .btnDisabled.btnPrimary {
+	background: rgb(227, 226, 226);
+}
+body > #buttonRow {
+	margin-left: -10px;
+}
+body .fewerArrow {
+	background-position: left -11px; width: 14px; height: 11px; margin-left: 2px; background-image: url("../images/fewer_more.png");
+}
+body .moreArrow {
+	width: 14px; height: 11px; margin-right: 1px; vertical-align: -1px; background-image: url("../images/fewer_more.png");
+}
+body input.syncStart {
+	background: url("../images/btn_quote_sprite.png") no-repeat left -30px rgb(232, 232, 233);
+}
+body input.syncStop {
+	background: url("../images/btn_quote_sprite.png") no-repeat left -30px rgb(232, 232, 233);
+}
+body input.syncStart:active {
+	background-position: left -150px;
+}
+body input.syncStop {
+	
+}
+body input.syncStop:active {
+	background-position: left -120px;
+}
+body .btnSpacerRight.btn {
+	margin-right: 5px;
+}
+body .bPageBlock .pbButton input.btnSpacerRight.btn {
+	margin-right: 5px;
+}
+body .btnSpacerLeft.btn {
+	margin-left: 5px;
+}
+#tsid {
+	height: 30px; margin-top: 6px; position: relative;
+}
+#helpNav {
+	height: 30px; margin-top: 6px; position: relative;
+}
+#notificationsNav {
+	height: 30px; margin-top: 6px; position: relative;
+}
+#userNav {
+	height: 30px; margin-top: 6px; position: relative;
+}
+#emailSettingsMink {
+	height: 30px; margin-top: 6px; position: relative;
+}
+#tsidButton {
+	background: rgb(53, 180, 233); padding: 0px 15px; border-radius: 11px; border: 0px currentColor; height: 24px; color: rgb(255, 255, 255); line-height: 24px; font-size: 1.1em; -moz-border-radius: 11px; -webkit-border-radius: 11px;
+}
+#helpNavButton {
+	background: rgb(53, 180, 233); padding: 0px 15px; border-radius: 11px; border: 0px currentColor; height: 24px; color: rgb(255, 255, 255); line-height: 24px; font-size: 1.1em; -moz-border-radius: 11px; -webkit-border-radius: 11px;
+}
+#notificationsNavButton {
+	background: rgb(53, 180, 233); padding: 0px 15px; border-radius: 11px; border: 0px currentColor; height: 24px; color: rgb(255, 255, 255); line-height: 24px; font-size: 1.1em; -moz-border-radius: 11px; -webkit-border-radius: 11px;
+}
+#userNavButton {
+	background: rgb(53, 180, 233); padding: 0px 15px; border-radius: 11px; border: 0px currentColor; height: 24px; color: rgb(255, 255, 255); line-height: 24px; font-size: 1.1em; -moz-border-radius: 11px; -webkit-border-radius: 11px;
+}
+#tsidButton {
+	min-width: 80px;
+}
+.menuButtonActivated #tsidButton {
+	height: 30px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0;
+}
+.menuButtonActivated #helpNavButton {
+	height: 30px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0;
+}
+.menuButtonActivated #notificationsNavButton {
+	height: 30px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0;
+}
+.menuButtonActivated #userNavButton {
+	height: 30px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0;
+}
+.menuButtonOver #helpNavButton {
+	background: rgb(255, 255, 255);
+}
+.menuButtonOver #notificationsNavButton {
+	background: rgb(255, 255, 255);
+}
+/*鼠标悬浮变色*************************************************************************/
+.menuButtonOver #userNavButton {
+	background: rgb(255, 255, 255);
+}
+.menuButtonOver #tsidButton {
+	background: rgb(255, 255, 255);
+}
+.menuButtonActivated #helpNavButton {
+	background: rgb(255, 255, 255);
+}
+.menuButtonActivated #notificationsNavButton {
+	background: rgb(255, 255, 255);
+}
+.menuButtonActivated #userNavButton {
+	background: rgb(255, 255, 255);
+}
+.menuButtonActivated #tsidButton {
+	background: rgb(255, 255, 255);
+}
+
+#helpNavLabel {
+	color: rgb(255, 255, 255);
+}
+#notificationsNavLabel {
+	color: rgb(255, 255, 255);
+}
+#userNavLabel {
+	color: rgb(255, 255, 255);
+}
+#tsidLabel {
+	color: rgb(255, 255, 255);
+}
+
+body #AppBodyHeader {
+	background-color: rgb(46,49,56);
+}
+
+/*头部右侧内容边距设置 **********************************************************************/
+.bPageHeader td.right {
+	padding-right:70px;padding-top:35px;
+}
+
+.bodyDiv {
+	border-top-color: currentColor; border-top-width:3px; border-top-style: solid; float: left; min-width: 1366px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; box-shadow: 0px 8px 10px hsla(0, 0%, 0%, 0.25); background-color: rgb(255, 255, 255); -moz-box-shadow: 0 8px 10px hsla(0, 0%, 0%, .25); -webkit-box-shadow: 0 8px 10px hsla(0, 0%, 0%, .25); -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px;
+	display:inline;
+}
+.kaishi {
+	border-top-color: currentColor; border-top-width:3px;
+}
+body .bodyDiv .outer .oRight {
+	background-color: transparent; 
+}
+body .bodyDiv .outerNoSidebar {
+	background-color: transparent;
+}
+/*中间内容的显示部分*/
+.outer td.oRight {
+	padding: 0px 0px 0px;
+}
+.bodyDiv .outerNoSidebar {
+	padding: 0px 10px 20px;
+}
+/*底部a标签**************************************************************************/
+body .bPageFooter a {
+	border: currentColor; color: rgb(255, 255, 255);
+}
+/*底部底色***************************************************************************/
+body .bPageFooter {
+	border: currentColor; color: rgb(255, 255, 255);
+}
+body.printableView .bPageFooter {
+	border-top-color: rgb(232, 232, 232); border-top-width: 1px; border-top-style: solid;
+}
+body.printable .bPageFooter {
+	border-top-color: rgb(232, 232, 232); border-top-width: 1px; border-top-style: solid;
+}
+body .bPageFooter .body {
+	display: none;
+}
+
+/*设置左侧边侧的背景颜色*****************************************************************/
+#sidebarCell {
+	border: 0px currentColor; background-color: rgb(46,49,56);
+}
+#sidebarDiv .sidebarModule {
+	border: 0px currentColor; background-color: rgb(68,73,83); width:1366px;
+}
+#sidebarDiv .nestedModule {
+	border: 0px currentColor; background-color: transparent;
+}
+#sidebarDiv {
+	background-color: rgb(46,49,56);
+}
+/*左侧四周边距设置**********************************************************************/
+.sidebarCollapsible {
+	padding: 9px 10px 0px 10px;
+}
+.sidebarCollapsed {
+	padding-right: 0px;
+}
+#handlebarContainer {
+	left: 212px; top: 9px; width: 9px; height: auto; bottom: 20px;
+}
+/*汗~这个是设置左侧左右伸缩特效*/
+.sidebarCollapsed #handlebarContainer {
+	left: 0px; bottom: 5px;
+}
+#handlebarContainer #handle {
+	top: 5px; width: 5px; right: 2px; bottom: 5px; position: absolute;
+}
+a#handlebarContainer:hover #handle {
+	background-color: rgb(224, 245, 252);
+}
+a#handlebarContainer:focus #handle {
+	background-color: rgb(224, 245, 252);
+}
+.noSidebarCell {
+	padding: 10px;
+}
+.sidebarCell .fixed {
+	padding: 10px;
+}
+/*设置左侧菜单各个子菜单的相间高度***********************************************************/
+#sidebarDiv .sidebarModule {
+	margin: 0px 0px 20px 0px;
+}
+#sidebarDiv .nestedModule {
+	margin: 0px 0px 0px;
+}
+/*设置菜单****************************************************************************/
+#sidebarDiv .sidebarModule .sidebarModuleBody {
+	background-color: rgb(35,37,43);
+}
+/*鼠标悬浮菜单的颜色*/
+#sidebarDiv .sidebarModule .sidebarModuleBody:hover{
+	background-color: rgb(35,111,189);width:100%;
+}
+#sidebarDiv .sidebarModule {
+	 background: url("../images/sidebar_sprite.png") no-repeat -9px bottom rgb(207, 238, 248);
+}
+/*设置ShortCut和Warning的背景色**************************************************************/
+#sidebarDiv .sidebarModuleHeader {
+	 background-color: rgb(35,37,43); color:#fff;
+}
+/*设置菜单字体横向宽度*************************************************************************/
+#sidebarDiv .sidebarModuleHeader h2 {
+	 padding: 8px 35px; display: block;
+}
+
+#sidebarDiv .imageModule .sidebarModuleBody {
+	padding: 0px; width: auto;
+}
+#sidebarDiv .searchScope input[type='checkbox'] {
+	margin-top: -3px; margin-right: 4px; vertical-align: middle;
+}
+#sidebarDiv .searchFooter {
+	padding: 0px; border: 0px currentColor;
+}
+#sidebarDiv .searchModule .searchScope {
+	padding-top: 5px;
+}
+#sidebarDiv .createNewModule {
+	background: none
+}
+#sidebarDiv .tagsMruModule {
+	background: none
+}
+/*设置search按钮************************************************************************/
+#sidebarDiv .createNewModule .sidebarModuleBody1 {
+	padding: 0px 0px 0px 0px;padding-top: 3px;
+}
+#sidebarDiv .tagsMruModule .sidebarModuleBody {
+	padding: 0px;
+}
+#sidebarDiv .linksModule ul {
+	padding: 0px; 
+}
+/*设置search按钮背景色************************************************************************/
+#sidebarDiv .menuButton {
+	background-color: rgb(35,37,43);  width: 200px; height: 34px; position: relative; z-index: 10
+}
+#sidebarDiv .menuButtonOver {
+	background-position: -615px top;
+}
+#sidebarDiv .menuButtonActivated {
+	z-index: 80;
+}
+/*设置search按钮色************************************************************************/
+#sidebarDiv .menuButtonButton {
+	margin-left:0px; padding: 6px 0px 8px 48px; border: 0px currentColor; width: 75px; color: #fff; font-size: 1.1em;background-color: rgb(35,37,43);
+}
+#sidebarDiv .menuButtonButton a {
+	color: rgb(255, 255, 255);
+}
+
+/*设置search按钮色************************************************************************/
+#sidebarDiv .menuButtonMenu {
+	line-height: 21px; background-color: rgb(68, 73, 83); margin-top: -4px; margin-left: 4px; box-shadow: 0px 1px 5px #727272;-moz-box-shadow: 0 1px 5px #727272; -webkit-box-shadow: 0 1px 5px #727272;
+}
+/*设置search下拉字体色************************************************************************/
+#sidebarDiv .menuButtonMenu .firstMenuItem {
+	color:#fff;
+	padding-top: 5px;
+}
+#sidebarDiv #tagsMruMenu > span {
+	padding-left: 6px;
+}
+#sidebarDiv .menuButtonMenu a {
+	border: currentColor; padding-top: 1px;
+}
+
+#sidebarDiv .menuButtonMenu a:hover {
+	color: rgb(1, 91, 167); background-color: rgb(227, 243, 255);
+}
+
+/*Search下拉列表里面字体与图片边距*********************************************************/
+#sidebarDiv .menuButtonMenu a .mruIcon {
+	margin-right: 20px; vertical-align: -3px;
+}
+#sidebarDiv .sidebarModuleTagLink {
+	padding-bottom: 0.25em;
+}
+#sidebarDiv .nestedModule {
+	padding: 0px;
+}
+#sidebarDiv .nestedModule .sidebarModuleHeader h2 {
+	padding: 0px;
+}
+#sidebarDiv .nestedModule .sidebarModule {
+	
+}
+#sidebarDiv .nestedModule .sidebarModuleHeader h2 {
+	
+}
+#sidebarDiv .nestedModule .sidebarModuleBody {
+	border-width: 0px 1px; border-style: none solid; border-color: currentColor rgb(223, 223, 223); margin: 0px 0px 5px; padding: 16px 15px 10px 7px;
+}
+#sidebarDiv .nestedModule .nestedModuleInner {
+	background: url("../images/sidebar_sprite.png") no-repeat -821px bottom;
+}
+#sidebarDiv .nestedModule {
+	background: url("../images/sidebar_sprite.png") no-repeat -1021px top;
+}
+#sidebarDiv .nestedModule .sidebarModuleHeader {
+	padding: 10px 7px 0px; color: rgb(51, 52, 53);
+}
+#sidebarDiv .linksModule a:link {
+	color: rgb(20, 104, 182); text-decoration: none;
+}
+#sidebarDiv .linksModule a:visited {
+	color: rgb(20, 104, 182); text-decoration: none;
+}
+#sidebarDiv .linksModule a:hover {
+	text-decoration: underline;
+}
+#sidebarDiv .linksModule li {
+	line-height: 1.5em; list-style-type: none;
+}
+#sidebarDiv .recycleBinModule {
+	background: url("../images/sidebar_sprite.png") no-repeat -9px bottom rgb(220, 251, 220);
+}
+/*垃圾回收站宽高设置********************************************************************/
+#sidebarDiv .recycleBinModule .sidebarModuleBody {
+	padding: 5px 10px 5px; 
+}
+#sidebarDiv .tagsLinkModule .sidebarModuleBody {
+	padding: 10px 10px 5px;
+}
+#sidebarDiv .quickCreateField {
+	padding-left: 0px;
+}
+#sidebarDiv #qcreate .btn {
+	margin-left: 0px;
+}
+#sidebarDiv .gTalkToggle {
+	color: rgb(51, 51, 51); margin-top: 3px; position: absolute;
+}
+#sidebarDiv #gTalkSidebar {
+	top: 12px; position: relative;
+}
+#sidebarDiv .gTalkToggle a {
+	padding-right: 3px;
+}
+#sidebarDiv .gTalkToggle .gTalkToggleShowLink {
+	padding-right: 0px; padding-left: 3px;
+}
+#sidebarDiv .gTalkToggle a:link {
+	color: rgb(20, 104, 182); text-decoration: none;
+}
+#sidebarDiv .gTalkToggle a:visited {
+	color: rgb(20, 104, 182); text-decoration: none;
+}
+#sidebarDiv .gTalkToggle a:hover {
+	text-decoration: underline;
+}
+/*字体与图片的距离***************************************************************/
+#sidebarDiv .recentItemModule .mruItem {
+	padding: 4px 10px 3px 25px; margin-right: 5px;
+}
+/*字体与图片的距离*****************************************************************/
+#sidebarDiv .recentItemModule .mruItem a img {
+	left: 0px; margin-left: 3px;
+}
+/*ShortCut边距*/
+#sidebarDiv .recentItemModule .sidebarModuleBody {
+	padding: 6px 5px 10px 4px;
+}
+#noTableContainer {
+	overflow: visible;
+}
+#noTableContainer::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: "\0020";
+}
+.noTableSidebar #sidebarDiv {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+/*Call四周border颜色*/
+body .toolsContent .bSubBlock {
+	margin-top:10px;	border-top-color:rgb(35,111,189); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-right-width: 0px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; background-color: rgb(204,204,204); -moz-border-radius: 0px; -webkit-border-radius: 0px;border-top-width: 3px;border-top-style: solid;
+}
+
+/*System四周border颜色*/
+body .toolsContent .bSubBlocks {
+		border-top-color:rgb(238,78,16); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; background-color: rgb(204,204,204); -moz-border-radius: 4px; -webkit-border-radius: 4px;border-top-width: 3px;border-top-style: solid;
+}
+
+/*Report四周border颜色*/
+body .toolsContent .bSubBlock_r {
+		border-top-color:rgb(240,176,23); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; background-color: rgb(204,204,204); -moz-border-radius: 4px; -webkit-border-radius: 4px;border-top-width: 3px;border-top-style: solid;
+}
+
+/*User四周border颜色*/
+body .toolsContent .bSubBlock_user {
+		border-top-color:rgb(138,183,27); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; background-color: rgb(204,204,204); -moz-border-radius: 4px; -webkit-border-radius: 4px;border-top-width: 3px;border-top-style: solid;
+}
+
+
+/*右侧标题的字体颜色*/
+body .bSubBlock h3.lbHeader {
+	color: rgb(150,85,220); font-size: 1.3em;
+}
+/*右侧颜色*/
+body .bSubBlock .lbBody {
+    background-color: rgb(204,204,204);
+}
+body .bSubBlock .lbBodyEmpty.lbBody {
+	display: none;
+}
+body .bEditBlock .pbBody {
+	background-image: none;
+}
+body .bEditBlock .pbBody .pbSubheader {
+	border-width: 1px 0px 0px; padding: 4px 16px; color: rgb(0, 0, 0); border-top-color: rgb(255, 255, 255); border-top-style: solid; background-image: url("../images/opacity75.png");
+}
+body .bWizardBlock .pbBody .pbSubheader {
+	border-width: 1px 0px 0px; padding: 4px 16px; color: rgb(0, 0, 0); border-top-color: rgb(255, 255, 255); border-top-style: solid; background-image: url("../images/opacity75.png");
+}
+body .bEditBlock .pbBody .first.pbSubheader {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}

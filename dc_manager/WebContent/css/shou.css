@@ -1,0 +1,32 @@
+﻿@charset "utf-8";
+
+/* reset */
+
+body,div,p,span,form,iframe,table,td,th,input,textarea,button,label,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%; }
+ul,ol,li,dl{list-style-type:none;}
+em,i,dfn,cite,strong,small{font-style:normal;} 
+img{border:0;}
+fieldset,button,input,select,option{vertical-align:middle;font:12px/18px "宋体",arial,sans-serif;}
+table{border-collapse:collapse;border-spacing:0}
+textarea{resize:none}
+
+
+
+/* weiduduan */
+#page{width:200px;margin:0 auto;}
+/*Search的按钮设置宽高*/
+.tzSelect{height:30px;display:inline-block;min-width:200px;position:relative;background:url(../images/dropdown_slice.png) no-repeat -99999px;}
+.tzSelect .selectBox{
+    font-size:13px; padding-top:10px;height:100%;width:200px; font-family: 'Arial', 'Helvetica', sans-serif; font-weight: bold;margin-right: 10px;
+	text-align:center;text-shadow:0px 0px 0 #FFF;color:#FFF;background:url(../images/select_slice.png) repeat-x rgb(35,37,43);background-image:url(../images/select_slice.png),url(../images/select_slice.png),url(../images/select_slice.png),url(../images/select_slice.png);-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
+}
+/*Search按钮悬浮的设置*/
+.tzSelect .selectBox:hover,.tzSelect .selectBox.expanded{color:#fff;text-shadow:0px 0px 0 orange; background-color: rgb(35,111,189);}
+/*下拉框的设置*/
+.tzSelect .dropDown{height:130px; color:#fff; background-color:rgb(46,49,56); width:200px;}
+.tzSelect li{height:30px;cursor:pointer;position:relative;}
+.tzSelect li:hover{background-position: 50% -256px, 0 -88px, 0 0;}
+.tzSelect li span{left:88px;position:absolute;top:10px;}
+.tzSelect li i{color:#999999;display:block;font-size:12px;}
+.tzSelect li img{left:9px;position:absolute;top:8px;}
