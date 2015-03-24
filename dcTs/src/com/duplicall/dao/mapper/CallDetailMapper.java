@@ -17,10 +17,11 @@ public class CallDetailMapper implements IRowMapper<CallDetail> {
         calldetail.setCreateTime(rs.getString("createtime"));
         calldetail.setCallId(rs.getLong("callid"));
         calldetail.setCallingParty(rs.getString("calling"));
-        calldetail.setCalledParty("called");
-        calldetail.setAnsweringParty("answer");
-        calldetail.setOrigCalling("origcalling");
-        calldetail.setType("type");
+        calldetail.setCalledParty(rs.getString("called"));
+        calldetail.setAnsweringParty(rs.getString("answer"));
+        calldetail.setOrigCalling(rs.getString("origcalling"));
+        calldetail.setOrigCalled(rs.getString("origCalled"));
+        calldetail.setType(rs.getString("type"));
         calldetail.setExtention(rs.getString("extension"));
         calldetail.setLastDirection(rs.getString("lastDirection"));
         calldetail.setSkill(rs.getString("skill"));
@@ -30,8 +31,7 @@ public class CallDetailMapper implements IRowMapper<CallDetail> {
         calldetail.setEstablishTime(rs.getString("establishtime"));
         calldetail.setEndTime(rs.getString("endtime"));
         calldetail.setUui(rs.getString("uui"));
-        calldetail.setNgpUserId(rs.getString("agentname"));
-        return calldetail;
+		return calldetail;
     }
     
 }

@@ -50,5 +50,4 @@ public interface IAgent {
      */
     public void dropAgentTab()
         throws ServiceException;
-    
 }

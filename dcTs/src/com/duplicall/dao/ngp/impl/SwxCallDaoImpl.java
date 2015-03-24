@@ -15,7 +15,7 @@ public class SwxCallDaoImpl implements ISwxCallDao{
     public List<Object> getCallIdByCaseId(String caseId,String startTime,String endTime)
         throws ServiceException
     {
-        String sql ="SELECT id FROM laes_calls WHERE case_id = "+102+" AND FROM_UNIXTIME(RIGHT(callid_seq_num, 10)) BETWEEN '"+startTime+"' AND '"+endTime+"';";
+        String sql ="SELECT id FROM laes_calls WHERE case_id = "+caseId+" AND FROM_UNIXTIME(RIGHT(callid_seq_num, 10)) BETWEEN '"+startTime+"' AND '"+endTime+"';";
         List<Object> callIdList = null;
         try {
             System.out.println(sql);
