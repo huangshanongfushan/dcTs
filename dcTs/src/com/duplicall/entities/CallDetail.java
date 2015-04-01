@@ -12,7 +12,7 @@ public class CallDetail {
 				+ lastDirection + ", skill=" + skill + ", trunk=" + trunk
 				+ ", ringTime=" + ringTime + ", DialedTime=" + DialedTime
 				+ ", EstablishTime=" + EstablishTime + ", endTime=" + endTime
-				+ ", uui=" + uui + ", ngpUserId=" + ngpUserId + "]";
+				+ ", uui=" + uui + ", ngpUserId=" + ngpUserId + "]"+"\r\n";
 	}
 
 	private long ucid;

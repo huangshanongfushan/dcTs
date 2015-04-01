@@ -27,7 +27,6 @@ public class AgentDaoImpl implements IAgentDao {
         throws Exception
     {
         String sql = "select * from agent where agent='"+agent+"'";
-        System.out.println(sql);
         return dbUtil.queryForObject(sql, new AgentMapper());
     }
     @Test

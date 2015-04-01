@@ -91,6 +91,9 @@ public class DBUtil<T> implements IDBConnect<T> {
         throws Exception
     {
         PreparedStatement ps = connec.prepareStatement(sql);
+        connec.prepareStatement(sql);
+        ps.execute();
+        pool.colsePs( ps);
         return 0;
     }
     

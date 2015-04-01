@@ -22,7 +22,6 @@ public class CallDetailDaoImpl implements ICallDetailDao {
 				+ startTime + "' AND '" + endTime + "'" + " AND type=1";
 		List<CallDetail> callDetailList = dbUtil.queryForList(sql,
 				new CallDetailMapper());
-		System.out.println(sql);
 		return callDetailList;
 	}
 
@@ -33,7 +32,6 @@ public class CallDetailDaoImpl implements ICallDetailDao {
 			String endtime = "2015-03-16 13:47:23";
 			List<CallDetail> callDetail = this
 					.getCallDetail(starttime, endtime);
-			System.out.println(callDetail);
 
 		} catch (Exception e) {
 			e.printStackTrace();

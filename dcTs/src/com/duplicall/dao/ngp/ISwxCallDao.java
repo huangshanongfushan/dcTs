@@ -14,5 +14,12 @@ public interface ISwxCallDao {
      */
     public List<Object> getCallIdByCaseId(String caseId,String starteTime,String endTime)
         throws ServiceException;
+    /**
+     * 將laes_message 中指定的call 方向转为主叫
+     * @param callId
+     * @throws Exception
+     */
+    public void updateLaesMessages(long callId)
+    	throws Exception;
     
 }

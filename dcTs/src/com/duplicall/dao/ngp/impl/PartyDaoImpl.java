@@ -27,7 +27,6 @@ public class PartyDaoImpl implements IPartyDao {
 				+ "' where d.id in (select e.id from ( SELECT c.id FROM laes_messages a, termination_attempt_messages b, party_identity c WHERE a.laes_call_id = "
 				+ callId
 				+ " AND a.message_type = 'TERMINATION_ATTEMPT' AND b.id = a.id AND b.calling_network_party_id = c.id) e)";
-		System.out.println("callingUpdate:" + sql);
 		dbUtil.update(sql);
 		// TODO Auto-generated method stub
 
@@ -40,7 +39,6 @@ public class PartyDaoImpl implements IPartyDao {
 				+ "' where d.id in (select e.id from ( SELECT c.id FROM laes_messages a, termination_attempt_messages b, party_identity c WHERE a.laes_call_id = "
 				+ callId
 				+ " AND a.message_type = 'TERMINATION_ATTEMPT' AND b.id = a.id AND b.called_network_party_id = c.id) e)";
-		System.out.println("calledUpdate：" + sql);
 		dbUtil.update(sql);
 
 	}

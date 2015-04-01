@@ -76,7 +76,7 @@ public class NgpPool implements Pool {
 	// 如果数据库连接池中connection对象都已被使用，即都被取走未返还,则创建3个connection对象保存其中供以后使用
 	@Override
 	public Connection getConnection() throws SQLException {
-		if (pool == null||pool.size()<1) {
+		if (pool == null || pool.size() < 1) {
 			// for(int i = 0; i < 3; i++) {
 			Connection conn = DriverManager.getConnection(url, user, password);
 			pool.add(conn);

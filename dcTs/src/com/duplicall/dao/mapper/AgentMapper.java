@@ -12,7 +12,6 @@ public class AgentMapper implements IRowMapper<Agent> {
         Agent agent = new Agent();
         agent.setAgent(rs.getString("agent"));
         agent.setAgentName(rs.getString("agentName"));
-        System.out.println(agent);
         return agent;
     }
     
