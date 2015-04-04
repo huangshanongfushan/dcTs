@@ -1,7 +1,5 @@
 package com.duplicall.service.agent.impl;
 
-import org.junit.Test;
-
 import com.duplicall.dao.agent.IAgentDao;
 import com.duplicall.dao.agent.impl.AgentDaoImpl;
 import com.duplicall.entities.Agent;

@@ -23,6 +23,8 @@ public class DClogPool implements Pool {
 	public static String url = "jdbc:mysql://localhost:3307/dclog";
 	public static String user = "root";
 	public static String password = "dc2014";
+//	static org.apache.log4j.Logger log = org.apache.log4j.Logger
+//			.getLogger(DClogPool.class);
 	// list集合保存数据库连接池中的connection对象
 	private static List<Connection> pool = new LinkedList<Connection>();
 	// 静态代码块，用于初始化list集合，即初始化数据库连接池，创建5个connection对象保存其中以备使用
@@ -38,7 +40,6 @@ public class DClogPool implements Pool {
 				pool.add(conn);
 			}
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 			throw new RuntimeException(e);
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -20,9 +20,11 @@ import java.util.logging.Logger;
  * @version V1.3.1
  */
 public class NgpPool implements Pool {
-	public static String url = "jdbc:mysql://localhost:3307/ngp";
-	public static String user = "root";
-	public static String password = "dc2014";
+	public static String url = "jdbc:mysql://localhost:3306/ngp";
+	public static String user = "ngp";
+	public static String password = "password";
+//	static org.apache.log4j.Logger log = org.apache.log4j.Logger
+//			.getLogger(NgpPool.class);
 	// list集合保存数据库连接池中的connection对象
 	private static List<Connection> pool = new LinkedList<Connection>();
 	// 静态代码块，用于初始化list集合，即初始化数据库连接池，创建5个connection对象保存其中以备使用
@@ -35,10 +37,10 @@ public class NgpPool implements Pool {
 				pool.add(conn);
 			}
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+//			log.error(e.getMessage());
 			throw new RuntimeException(e);
 		} catch (SQLException e) {
-			e.printStackTrace();
+//			log.error(e.getMessage());
 			throw new RuntimeException(e);
 		}
 	}

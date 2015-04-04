@@ -1,16 +1,19 @@
 package com.duplicall.task;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+import org.dom4j.io.XMLWriter;
 
-import com.duplicall.common.ConfigUtil;
 import com.duplicall.common.Constant;
 import com.duplicall.dao.device.IDeviceDao;
 import com.duplicall.dao.device.impl.DeviceDaoImpl;
@@ -22,7 +25,7 @@ import com.duplicall.dao.ngp.impl.PartyDaoImpl;
 import com.duplicall.dao.ngp.impl.SwxCallDaoImpl;
 import com.duplicall.entities.CallDetail;
 import com.duplicall.entities.CallMessage;
-import com.duplicall.exception.ServiceException;
+import com.duplicall.entities.TsConfig;
 import com.duplicall.pojo.Party;
 import com.duplicall.service.callDetail.ICallDetail;
 import com.duplicall.service.callDetail.impl.CallDetailImpl;
@@ -41,28 +44,26 @@ public class MyTask extends java.util.TimerTask {
 
 	@Override
 	public void run() {
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		// 当前时间
-		Long end = System.currentTimeMillis();
-		Calendar c = Calendar.getInstance();
-		c.setTimeInMillis(end);
-		Date date = c.getTime();
+		Date date = new Date();
 		String startTime = null;
 		try {
-			startTime = ConfigUtil.readConfig(new File(Constant.CONPATH))
+			startTime = this.readConfig(new File(Constant.CONPATH))
 					.getLastTime();
 		} catch (Exception e1) {
+			e1.printStackTrace();
 			log.error("read config file fails");
 			return;
 		}
 		// String startTime = "2015-03-23 14:22:34";
-		@SuppressWarnings("deprecation")
-		String endTime = date.toLocaleString();
+		String endTime = sdf.format(date);
 		// String endTime = "2015-03-23 14:22:35";
 		List<CallDetail> detailList = null;
 		// 写记录最后备份时间
 		File file = new File("C://macaw/config/avayaConfig.xml");
 		try {
-			ConfigUtil.updateConfig(file, endTime);
+			this.updateConfig(file, endTime);
 		} catch (IOException e1) {
 			log.error("read config file fails");
 			return;
@@ -70,12 +71,16 @@ public class MyTask extends java.util.TimerTask {
 		try {
 			detailList = detailImpl.getCallDetail(startTime, endTime);
 			log.info(startTime + "--" + endTime + " calldetails:" + detailList);
-		} catch (ServiceException e) {
-			log.warn(e.getMessage());
+		} catch (Exception e) {
+			log.error("query for callDetail error");
+			return;
+		}
+		if(detailList==null||detailList.size()<1){
 			return;
 		}
 		// 遍历需要处理的通话
 		for (CallDetail callDetail : detailList) {
+			log.info("Deal with the call:"+callDetail);
 			String extension = callDetail.getExtention();
 			Long deviceId = 0L;
 			try {
@@ -83,7 +88,8 @@ public class MyTask extends java.util.TimerTask {
 					deviceId = deviceDaoImpl.getDeviceId(extension);
 				}
 			} catch (Exception e) {
-				log.warn(e.getMessage());
+				log.error("query for device Id fail!");
+				continue;
 			}
 			// 主叫方信息
 			Party callingParty = new Party();
@@ -101,29 +107,28 @@ public class MyTask extends java.util.TimerTask {
 			try {
 				// call发生的时间
 				String createTime = callDetail.getCreateTime();
-				SimpleDateFormat df = new SimpleDateFormat(
+				/*SimpleDateFormat df = new SimpleDateFormat(
 						"yyyy-MM-dd HH:mm:ss");
-				try {
-					Date fromDate = df.parse(createTime);
-					Date endDate = df.parse(createTime);
-					// 取前后一秒
-					long fromTimeLong = fromDate.getTime() - 1000;
-					long endTimeLong = endDate.getTime() + 1000;
-					Date fromLongDate = new Date(fromTimeLong);
-					Date endLongDate = new Date(endTimeLong);
-					String fromT = df.format(fromLongDate);
-					String endT = df.format(endLongDate);
-					// 获取这一时刻的ngp中call的数据，考虑到处理时间的效率，给了两秒的时间间隔，正常情况下应该只有一条数据
-					callIdList = swxCallDaoImpl.getCallIdByCaseId(
-							deviceId + "", fromT, endT);
-				} catch (ParseException e) {
-					log.warn(e.getMessage());
+				Date fromDate = df.parse(createTime);
+				Date endDate = df.parse(createTime);
+				// 取前后一秒
+				long fromTimeLong = fromDate.getTime() - 1000;
+				long endTimeLong = endDate.getTime() + 1000;
+				Date fromLongDate = new Date(fromTimeLong);
+				Date endLongDate = new Date(endTimeLong);
+				String fromT = df.format(fromLongDate);
+				String endT = df.format(endLongDate);*/
+				// 获取这一时刻的ngp中call的数据，考虑到处理时间的效率
+				callIdList = swxCallDaoImpl.getCallIdByCaseId(deviceId + "",
+						createTime, createTime);
+				if(callIdList==null||callIdList.size()<1){
+					continue;
 				}
 				// partyDaoImpl.up
 			} catch (NumberFormatException e) {
-				log.warn(e.getMessage());
-			} catch (ServiceException e) {
-				log.warn(e.getMessage());
+				log.error(e.getMessage());
+			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 			// 处理每个通话
 			for (Object object : callIdList) {
@@ -142,12 +147,14 @@ public class MyTask extends java.util.TimerTask {
 
 					// 下面这几行是转换主被叫
 					long messageId = messageDaoImpl.getMessageId(callid);
-					if(messageId<1){
+					if (messageId < 1) {
+						log.error("no messageId");
 						continue;
 					}
 					CallMessage message = messageDaoImpl
 							.getOrginationMessage(messageId);
 					if (message == null) {
+						log.error("no message");
 						continue;
 					}
 					messageDaoImpl.insertOriginationMessage(message);
@@ -156,14 +163,53 @@ public class MyTask extends java.util.TimerTask {
 					log.info("delete terminal table ");
 					swxCallDaoImpl.updateLaesMessages(callid);
 					log.info("update derection");
-
 				} catch (Exception e) {
-					log.warn(e.getMessage());
+					log.error("修改主被叫错误:"+e.getMessage());
 					continue;
 				}
 			}
 		}
 
+	}
+	
+	public  void updateConfig(File file, String endtime) throws IOException {
+		
+		SAXReader saxReader = new SAXReader();
+		Document document = null;
+		try {
+			document = saxReader.read(file);
+		} catch (DocumentException e) {
+			e.printStackTrace();
+		}
+		Element rootElement = document.getRootElement();
+		Element lastTimeElement = rootElement.element("lasttime");
+		lastTimeElement.setText(endtime);
+		XMLWriter writer = new XMLWriter(new FileOutputStream(file));
+		writer.write(document);
+		writer.close();
+	}
+	
+	/**
+	 * 读取配置文件
+	 * 
+	 * @param file
+	 * @return
+	 */
+	public  TsConfig readConfig(File file) throws Exception {
+		SAXReader saxReader = new SAXReader();
+		Document matchFiledocument = null;
+		matchFiledocument = saxReader.read(file);
+		Element rootElement = matchFiledocument.getRootElement();
+		String enable = rootElement.attributeValue("enable");
+		Element lastTimeElement = rootElement.element("lasttime");
+		String lasttime = lastTimeElement.getTextTrim();
+		Element freElement = rootElement.element("frequency");
+		long interval = Long.parseLong(freElement.getTextTrim());
+		TsConfig tsConfig = new TsConfig();
+		tsConfig.setEnable(enable);
+		tsConfig.setInterval(interval);
+		tsConfig.setLastTime(lasttime);
+		return tsConfig;
 	}
 
 }

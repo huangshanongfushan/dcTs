@@ -15,7 +15,7 @@ public class CallDetailMapper implements IRowMapper<CallDetail> {
         calldetail.setAgent(rs.getString("agent"));
         calldetail.setUcid(rs.getLong("ucid"));
         calldetail.setCreateTime(rs.getString("createtime"));
-        calldetail.setCallId(rs.getLong("callid"));
+//        calldetail.setCallId(rs.getLong("callid"));
         calldetail.setCallingParty(rs.getString("calling"));
         calldetail.setCalledParty(rs.getString("called"));
         calldetail.setAnsweringParty(rs.getString("answer"));

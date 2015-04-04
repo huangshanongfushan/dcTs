@@ -35,7 +35,4 @@ public class SwxCallDaoImpl implements ISwxCallDao {
 		dbUtil.update(sql);
 	}
 
-	@Test
-	public void testGetCallIdByCaseId() {
-	}
 }

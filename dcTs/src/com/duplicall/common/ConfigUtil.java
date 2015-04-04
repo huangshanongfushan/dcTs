@@ -20,7 +20,8 @@ public class ConfigUtil {
 	 * @param endtime
 	 * @throws IOException
 	 */
-	public static void updateConfig(File file, String endtime) throws IOException {
+	public  void updateConfig(File file, String endtime) throws IOException {
+		
 		SAXReader saxReader = new SAXReader();
 		Document document = null;
 		try {
@@ -42,7 +43,7 @@ public class ConfigUtil {
 	 * @param file
 	 * @return
 	 */
-	public static TsConfig readConfig(File file) throws Exception {
+	public  TsConfig readConfig(File file) throws Exception {
 		SAXReader saxReader = new SAXReader();
 		Document matchFiledocument = null;
 		matchFiledocument = saxReader.read(file);
