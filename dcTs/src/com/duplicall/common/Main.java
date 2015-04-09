@@ -2,7 +2,6 @@ package com.duplicall.common;
 
 import java.io.File;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -15,7 +14,6 @@ public class Main {
 
 	// 入口，进行定时任务
 	public static void main(String[] args) {
-		BasicDataSource a = new BasicDataSource();
 		Main main = new Main();
 		// 一直执行
 		File file = new File(Constant.CONPATH);

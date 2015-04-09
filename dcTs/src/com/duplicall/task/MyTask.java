@@ -72,7 +72,7 @@ public class MyTask extends java.util.TimerTask {
 			detailList = detailImpl.getCallDetail(startTime, endTime);
 			log.info(startTime + "--" + endTime + " calldetails:" + detailList);
 		} catch (Exception e) {
-			log.error("query for callDetail error");
+			log.error(e.getMessage()+" query for callDetail error");
 			return;
 		}
 		if(detailList==null||detailList.size()<1){
@@ -80,7 +80,6 @@ public class MyTask extends java.util.TimerTask {
 		}
 		// 遍历需要处理的通话
 		for (CallDetail callDetail : detailList) {
-			log.info("Deal with the call:"+callDetail);
 			String extension = callDetail.getExtention();
 			Long deviceId = 0L;
 			try {
@@ -107,7 +106,7 @@ public class MyTask extends java.util.TimerTask {
 			try {
 				// call发生的时间
 				String createTime = callDetail.getCreateTime();
-				/*SimpleDateFormat df = new SimpleDateFormat(
+				SimpleDateFormat df = new SimpleDateFormat(
 						"yyyy-MM-dd HH:mm:ss");
 				Date fromDate = df.parse(createTime);
 				Date endDate = df.parse(createTime);
@@ -117,10 +116,10 @@ public class MyTask extends java.util.TimerTask {
 				Date fromLongDate = new Date(fromTimeLong);
 				Date endLongDate = new Date(endTimeLong);
 				String fromT = df.format(fromLongDate);
-				String endT = df.format(endLongDate);*/
+				String endT = df.format(endLongDate);
 				// 获取这一时刻的ngp中call的数据，考虑到处理时间的效率
 				callIdList = swxCallDaoImpl.getCallIdByCaseId(deviceId + "",
-						createTime, createTime);
+						fromT, endT);
 				if(callIdList==null||callIdList.size()<1){
 					continue;
 				}
@@ -134,6 +133,7 @@ public class MyTask extends java.util.TimerTask {
 			for (Object object : callIdList) {
 				// 获取每个call的Id
 				Long callid = (Long) object;
+				log.info("to Deal with the call "+callid+":"+callDetail);
 				try {
 					// 修改被叫方
 					partyDaoImpl.updateCalledParty(callid, calledParty);

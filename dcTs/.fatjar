@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sat Apr 04 14:59:21 CST 2015
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=dcTs_fat1.jar
+manifest.mergeall=true
+manifest.mainclass=com.duplicall.common.Main
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
